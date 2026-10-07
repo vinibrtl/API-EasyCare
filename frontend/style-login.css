@@ -115,3 +115,8 @@ header button {
     padding-top: 13px;
     padding-bottom: 10px;
 }
+
+.logo {
+    width: 120px;
+    height: 70px;
+ }
