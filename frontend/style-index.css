@@ -10,17 +10,13 @@ body {
     color: white;
 }
  
- 
 header {
     height: 55px;
     background-color: white;
- 
     display: flex;
     align-items: center;
     justify-content: space-between;
- 
     padding: 0 30px;
- 
     color: black;
 }
  
@@ -38,18 +34,15 @@ nav {
 nav a {
     text-decoration: none;
     color: black;
-    font-size: 10px;
+    font-size: 15px;
 }
  
 button {
     border: none;
     background-color: #13bce9;
     color: white;
- 
     padding: 8px 18px;
- 
     border-radius: 5px;
- 
     cursor: pointer;
 }
  
@@ -58,21 +51,16 @@ nav span {
 }
  
  
- 
 .inicio {
     padding: 30px;
 }
  
 .banner {
     background: linear-gradient(110deg, #3830bd, #566fe5);
- 
     max-width: 1000px;
     height: 300px;
- 
     margin: auto;
- 
     padding: 35px;
- 
     border-radius: 7px;
  
 }
@@ -90,7 +78,6 @@ nav span {
  
 .botoes {
     margin-top: 25px;
- 
     display: flex;
     gap: 10px;
 }
@@ -99,15 +86,9 @@ nav span {
     background-color: #05072c;
 }
  
- 
- 
- 
- 
- 
 .diferenciais {
     max-width: 1000px;
     margin: auto;
- 
     padding: 10px 30px 40px;
 }
  
@@ -123,13 +104,9 @@ nav span {
  
 .card {
     border: 1px solid #777a9d;
- 
     border-radius: 10px;
- 
     padding: 18px;
- 
     flex: 1;
- 
     min-height: 150px;
 }
  
@@ -141,7 +118,6 @@ nav span {
 .card p {
     font-size: 15px;
     line-height: 1.5;
- 
     margin-bottom: 15px;
 }
  
@@ -149,20 +125,14 @@ nav span {
     font-size: 9px;
     padding: 7px 13px;
 }
- 
-/* ORGANIZAÇÃO */
- 
+  
 .organizacao {
     background-color: white;
     color: black;
- 
     max-width: 1000px;
     margin: 0 auto 40px;
- 
     border-radius: 6px;
- 
     padding: 25px;
- 
     display: flex;
     align-items: center;
     gap: 30px;
@@ -191,44 +161,35 @@ nav span {
     display: block;
 }
  
- 
-/* SOBRE O EASYCARE */
- 
+  
 .familia {
     max-width: 1000px;
     margin: auto;
- 
     padding: 0 30px 50px;
 }
  
 .familia h2 {
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 12px;
 }
  
 .familia > p {
-    font-size: 11px;
+    font-size: 15px;
     line-height: 1.6;
- 
     max-width: 850px;
- 
     margin-bottom: 25px;
 }
  
 .familia-conteudo {
     display: flex;
     align-items: center;
- 
     gap: 20px;
 }
  
 .familia-card {
     border: 1px solid #777a9d;
- 
     border-radius: 10px;
- 
     padding: 20px;
- 
     width: 35%;
 }
  
@@ -240,7 +201,6 @@ nav span {
 .familia-card p {
     font-size: 10px;
     line-height: 1.5;
- 
     margin-bottom: 15px;
 }
  
@@ -254,8 +214,14 @@ nav span {
  
 .familia-imagem img {
     width: 100%;
- 
     border-radius: 5px;
- 
     display: block;
+}
+
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 20px 20px;
+    color: black;
+    background-color: white;
+    text-align: center;
 }

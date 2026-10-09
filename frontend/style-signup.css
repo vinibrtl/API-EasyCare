@@ -36,7 +36,7 @@ nav {
 nav a {
     text-decoration: none;
     color: black;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 nav span {
@@ -127,4 +127,12 @@ header button {
     color: #13bce9;
     text-decoration: underline;
     margin-left: 2px;
+}
+
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 20px 20px;
+    color: black;
+    background-color: white;
+    text-align: center;
 }
