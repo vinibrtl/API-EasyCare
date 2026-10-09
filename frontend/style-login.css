@@ -10,7 +10,6 @@ body {
     color: white;
 }
 
-/* --- CABEÇALHO ORIGINAL MANTIDO EXATAMENTE COMO ESTAVA --- */
 header {
     height: 55px;
     background-color: white;
@@ -50,20 +49,17 @@ header button {
     border-radius: 5px;
     cursor: pointer;
 }
-/* ---------------------------------------------------- */
 
-/* --- BLOCO DE LOGIN MAIOR E POSICIONADO MAIS ACIMA --- */
 .login-page {
     min-height: calc(100vh - 55px);
     display: flex;
     justify-content: center;
-    /* Removido o align-items: center para não ficar no meio exato da tela */
-    padding-top: 80px; /* Deixa o bloco mais para cima */
+    padding-top: 80px; 
     position: relative;
 }
 
 .login-box {
-    width: 320px; /* Bloco maior */
+    width: 320px;
     background-color: white;
     padding: 28px 22px 20px;
     border-radius: 8px;
@@ -76,11 +72,11 @@ header button {
 
 .login-box input {
     width: 100%;
-    height: 38px; /* Campos maiores e confortáveis */
+    height: 38px;
     border: 1px solid #d4d4d4;
     border-radius: 5px;
     padding: 0 12px;
-    font-size: 13px; /* Texto legível */
+    font-size: 13px;
     outline: none;
     color: #333;
 }
