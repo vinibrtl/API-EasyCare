@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 // USUARIO
 
-app.post('/usuarios', async (req, res) => {
+app.post('/usuario', async (req, res) => {
     try {
         const {nome, email, senha} = req.body
 
@@ -41,7 +41,7 @@ app.post('/usuarios', async (req, res) => {
 
 ////////////////////////////////////////////
 // ABAIXO CÓDIGO DO SOR
-//////////////////////////////////////
+////////////////////////////////////////////
 
 /*app.get('/usuarios', async (req, res) => {
 
