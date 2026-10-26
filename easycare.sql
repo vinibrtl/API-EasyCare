@@ -78,3 +78,13 @@ CREATE TABLE IF NOT EXISTS exame (
 	resultado VARCHAR (200) NOT NULL,
     FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
+
+/*CREATE TABLE IF NOT EXISTS usuario(
+	id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(25) NOT NULL UNIQUE,
+    data_nascimento DATE NOT NULL,
+    email VARCHAR(50) NOT NULL UNIQUE,
+    senha VARCHAR(250) NOT NULL,
+    telefone VARCHAR(20) NOT NULL
+);*/

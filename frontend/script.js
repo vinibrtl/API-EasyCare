@@ -1,11 +1,12 @@
 
 const API_URL = 'http://localhost:3000';
 
-const formulario = document.getElementById('formulario-usuario');
+const formulario = document.getElementById('user-form');
 const campoNome = document.getElementById('nome');
 const campoSenha = document.getElementById('senha');
 const campoEmail = document.getElementById('email');
 const mensagem = document.getElementById('mensagem');
+const botaoCadastrar = document.getElementById('btnCadastrar')
 
 function mostrarMensagem(texto, tipo = 'info') {
   mensagem.textContent = texto;
@@ -21,6 +22,7 @@ async function criarUsuario(evento) {
     senha: campoSenha.value,
   };
 
+  console.log("chegou aqui");
   try {
     const resposta = await fetch(`${API_URL}/usuario`, {
       method: 'POST',
@@ -29,7 +31,8 @@ async function criarUsuario(evento) {
       },
       body: JSON.stringify(dados),
     });
-
+    
+    
     const resultado = await resposta.json().catch(() => ({}));
 
     if (!resposta.ok) {
@@ -45,4 +48,4 @@ async function criarUsuario(evento) {
   }
 }
 
-formulario.addEventListener('submit', criarUsuario);
+formulario.addEventListener('submit', criarUsuario)

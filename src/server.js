@@ -3,9 +3,11 @@ const express = require('express')
 require('dotenv').config()
 //importando do arquivo do banco de dados
 const db = require('./database')
+const cors = require('cors');
 
 const app = express()
 const port = process.env.PORT || 3000
+app.use(cors());
 
 app.use(express.json())
 //-----------------------------------------------------------------
@@ -24,7 +26,7 @@ app.post('/usuario', async (req, res) => {
         }
 
         const [resultado] = await db.query(
-            'INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?)',
+            'INSERT INTO usuario(nome, email, senha) VALUES (?, ?, ?)',
             [nome, email, senha]
         )
 
@@ -290,6 +292,7 @@ app.delete('/campanhas/:id', async (req, res) => {
         res.status(500).json({ message: 'Erro ao excluir campanha' })
     }
 })
+
 
 app.listen (port, () => {
     console.log(`Server rodando em http://localhost:${port}`);
