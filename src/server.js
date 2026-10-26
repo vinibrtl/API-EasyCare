@@ -15,8 +15,35 @@ app.get('/', (req, res) => {
 
 // USUARIO
 
+app.post('/usuarios', async (req, res) => {
+    try {
+        const {nome, email, senha} = req.body
 
-app.get('/usuarios', async (req, res) => {
+        if(!nome || !email || !senha){
+            return res.status(400).json({ message: 'Todos os campos são obrigatórios'})
+        }
+
+        const [resultado] = await db.query(
+            'INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?)',
+            [nome, email, senha]
+        )
+
+        res.status(201).json({
+            id_usuario: resultado.insertId,
+            nome,
+            email,
+            senha
+        })
+    } catch (error) {
+        res.status(500).json({ message: 'Erro ao cadastrar usuário'})
+    }
+})
+
+////////////////////////////////////////////
+// ABAIXO CÓDIGO DO SOR
+//////////////////////////////////////
+
+/*app.get('/usuarios', async (req, res) => {
 
     try{
 
@@ -35,7 +62,7 @@ app.get('/usuarios', async (req, res) => {
 
     }
 
-})
+})*/
 
 app.get('/usuarios/:id_usuario', async (req, res) => {
     try {
