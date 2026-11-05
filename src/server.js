@@ -297,3 +297,20 @@ app.delete('/campanhas/:id', async (req, res) => {
 app.listen (port, () => {
     console.log(`Server rodando em http://localhost:${port}`);
 })
+
+
+
+//teste
+const session = require('express-session');
+
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'lax',
+    maxAge: 1000 * 60 * 60 * 24 * 7 // 7 dias
+  }
+}));
