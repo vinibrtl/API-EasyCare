@@ -11,20 +11,19 @@ body {
 }
 
 header {
-    height: 55px;
+    height: 65px;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
-    color: black;
+    color: #080a35;
 }
 
 .logo {
     width: 120px;
-    height: 70px;
-    font-size: 12px;
-    font-weight: bold;
+    height: auto;
+    display: block;
 }
 
 nav {
@@ -35,12 +34,9 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: black;
+    color: #080a35;
     font-size: 15px;
-}
-
-nav span {
-    font-size: 14px;
+    font-weight: 500;
 }
 
 header button {

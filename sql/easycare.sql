@@ -57,25 +57,6 @@ CREATE TABLE IF NOT EXISTS consulta (
     FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
-CREATE TABLE IF NOT EXISTS receita (
-	id_receita INT AUTO_INCREMENT PRIMARY KEY,
-    id_usuario INT NOT NULL,
-	dt_emissao VARCHAR(8) NOT NULL,
-    medico VARCHAR(100) NOT NULL,
-    arquivo VARCHAR(100) NOT NULL,
-    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)	
-);
-
-CREATE TABLE IF NOT EXISTS exame (
-    id_exame INT AUTO_INCREMENT PRIMARY KEY,
-	id_usuario INT NOT NULL,
-    nome VARCHAR(60) NOT NULL,
-    data_exame DATE,
-    arquivo VARCHAR (200) NOT NULL,
-	resultado VARCHAR (200) NOT NULL,
-    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
-);
-
 /*CREATE TABLE IF NOT EXISTS usuario(
 	id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
