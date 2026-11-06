@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos | EasyCare</title>
+    <link rel="stylesheet" href="../css/documentos.css">
+    <script src="../js/documentos.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a class="marca" href="dashboard.html">
+            <img src="../../imgs/logoazulepreto.png" alt="EasyCare">
+        </a>
+
+        <nav class="menu" aria-label="Menu principal">
+            <a href="dashboard.html">Início</a>
+            <a class="ativo" href="calendario.html">Calendário</a>
+            <a href="documentos.html">Prontuários</a>
+            <a href="compartilhamentofamiliar.html">Familiares</a>
+            <a href="unidades.html">Unidades de saúde</a>
+        </nav>
+
+        <div class="perfil">
+            <span class="notificacao" title="Notificações"></span><!--NÃP ESQUECER DE BAIXAR A IMAGEM-->
+            <span class="avatar" title="Perfil"> <img src="../../imgs/user.png" alt=""></span> <!--NÃP ESQUECER DE BAIXAR A IMAGEM-->
+        </div>
+    </header>
+
+    <main>
+        <div class="caminho">Início / <strong>Prontuários</strong></div>
+        <div class="cabecalho-pagina">
+            <div>
+                <h1>Meus documentos</h1>
+                <p>Exames, receitas e outros registros de saúde em um só lugar.</p>
+            </div>
+        </div>
+
+        <div class="conteudo">
+            <section class="area-documentos">
+                <div class="titulo-secao"><h2>Documentos cadastrados</h2></div>
+                <div id="lista-documentos"><p>Carregando documentos...</p></div>
+            </section>
+
+            <section class="area-formulario">
+                <h2 id="titulo-form">Novo documento</h2>
+                <p class="descricao-form">Adicione um documento ao seu prontuário.</p>
+                <form id="form-documento">
+                    <label for="titulo">Título</label>
+                    <input id="titulo" maxlength="100" required placeholder="Ex.: Exame de sangue">
+
+                    <label for="tipo">Tipo</label>
+                    <select id="tipo" required>
+                        <option value="">Selecione</option>
+                        <option value="Exame">Exame</option>
+                        <option value="Receita">Receita</option>
+                        <option value="Atestado">Atestado</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+
+                    <label for="arquivo">Link do documento</label>
+                    <input id="arquivo" type="url" maxlength="100" required placeholder="https://...">
+
+                    <label for="observacao">Observações</label>
+                    <textarea id="observacao" maxlength="200" placeholder="Informações adicionais"></textarea>
+
+                    <div class="botoes">
+                        <button id="salvar" type="submit">Salvar documento</button>
+                        <button id="cancelar" type="button" hidden>Cancelar edição</button>
+                    </div>
+                </form>
+                <p id="mensagem" role="status"></p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

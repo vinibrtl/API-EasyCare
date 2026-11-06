@@ -40,8 +40,6 @@ async function criarUsuario(evento) {
       throw new Error(resultado.message || 'Erro ao criar usuário.');
     }
 
-    
-
     mostrarMensagem('Usuário criado com sucesso!', 'sucesso');
     formulario.reset();
 

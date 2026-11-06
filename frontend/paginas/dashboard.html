@@ -3,10 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main - Easycare</title>
+    <title>Início | EasyCare</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="../js/dashboard.js" defer></script>
 </head>
 <body>
-    <input type="text" name="" id="desc-receita">
-    <button id="enviar-documento"></button>
+    <header class="header">
+        <a class="marca" href="dashboard.html">
+            <img src="../../imgs/logoazulepreto.png" alt="EasyCare">
+        </a>
+
+        <nav class="menu" aria-label="Menu principal">
+            <a  class="ativo" href="dashboard.html">Início</a>
+            <a href="calendario.html">Calendário</a>
+            <a href="documentos.html">Prontuários</a>
+            <a href="compartilhamentofamiliar.html">Familiares</a>
+            <a href="unidades.html">Unidades de saúde</a>
+        </nav>
+
+        <div class="perfil">
+            <span class="notificacao" title="Notificações"></span><!--NÃP ESQUECER DE BAIXAR A IMAGEM-->
+            <span class="avatar" title="Perfil"> <img src="../../imgs/user.png" alt=""></span> <!--NÃP ESQUECER DE BAIXAR A IMAGEM-->
+        </div>
+    </header>
+
+    <main>
+        <div class="caminho">Início</div>
+        <h1>Meu EasyCare</h1>
+        <p class="introducao">Consulte seus registros e acesse as principais funcionalidades.</p>
+
+        <section class="resumo" aria-label="Resumo dos registros">
+            <div class="resumo-item">
+                <p>Consultas cadastradas</p>
+                <strong id="total-consultas">—</strong>
+                <a href="consultas.html">Ver consultas</a>
+            </div>
+            <div class="resumo-item">
+                <p>Documentos cadastrados</p>
+                <strong id="total-documentos">—</strong>
+                <a href="documentos.html">Ver documentos</a>
+            </div>
+        </section>
+
+        <section class="conteudo">
+            <div class="bloco">
+                <div class="titulo-bloco">
+                    <h2>Minhas consultas</h2>
+                    <a href="consultas.html">Gerenciar</a>
+                </div>
+                <div id="resumo-consultas">Carregando consultas...</div>
+                <a class="botao" href="consultas.html">Nova consulta</a>
+            </div>
+
+            <div class="bloco">
+                <div class="titulo-bloco">
+                    <h2>Meus documentos</h2>
+                    <a href="documentos.html">Gerenciar</a>
+                </div>
+                <div id="resumo-documentos">Carregando documentos...</div>
+                <a class="botao" href="documentos.html">Novo documento</a>
+            </div>
+        </section>
+        <p id="mensagem" role="status"></p>
+    </main>
 </body>
 </html>

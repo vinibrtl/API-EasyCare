@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas | EasyCare</title>
+    <link rel="stylesheet" href="../css/consultas.css">
+    <script src="../js/consultas.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a class="marca" href="dashboard.html">
+            <img src="../../imgs/logoazulepreto.png" alt="EasyCare">
+        </a>
+
+        <nav class="menu" aria-label="Menu principal">
+            <a href="dashboard.html">Início</a>
+            <a href="calendario.html">Calendário</a>
+            <a  class="ativo" href="documentos.html">Prontuários</a>
+            <a href="compartilhamentofamiliar.html">Familiares</a>
+            <a href="unidades.html">Unidades de saúde</a>
+        </nav>
+
+        <div class="perfil">
+            <span class="notificacao" title="Notificações"></span> <!--NÃP ESQUECER DE BAIXAR A IMAGEM-->
+            <span class="avatar" title="Perfil"> <img src="../../imgs/user.png" alt=""></span> <!--NÃP ESQUECER DE BAIXAR A IMAGEM-->
+        </div>
+    </header>
+
+    <main>
+        <div class="caminho">Início / Calendário / <strong>Consultas</strong></div>
+
+        <div class="cabecalho-pagina">
+            <div>
+                <h1>Consultas</h1>
+                <p>Acompanhe e organize suas consultas médicas.</p>
+            </div>
+            <a class="voltar" href="calendario.html">Voltar ao calendário</a>
+        </div>
+
+        <div class="conteudo">
+            <section class="area-consultas">
+                <div class="titulo-secao">
+                    <h2>Minhas consultas</h2>
+                </div>
+                <div id="lista-consultas">
+                    <p>Carregando consultas...</p>
+                </div>
+            </section>
+
+            <section class="area-formulario">
+                <h2 id="titulo-form">Nova consulta</h2>
+                <p class="descricao-form">Preencha os dados para registrar uma consulta.</p>
+
+                <form id="form-consulta">
+                    <label for="especialidade">Especialidade</label>
+                    <input id="especialidade" type="text" maxlength="100" placeholder="Ex.: Cardiologia" required>
+
+                    <label for="dt_hora">Data da consulta</label>
+                    <input id="dt_hora" type="date" required>
+
+                    <label for="local_consulta">Local</label>
+                    <input id="local_consulta" type="text" maxlength="100" placeholder="Ex.: UBS Centro" required>
+
+                    <label for="observacao">Observações</label>
+                    <textarea id="observacao" maxlength="200" placeholder="Informações adicionais"></textarea>
+
+                    <div class="botoes">
+                        <button type="submit" id="salvar">Salvar consulta</button>
+                        <button type="button" id="cancelar" hidden>Cancelar edição</button>
+                    </div>
+                </form>
+                <p id="mensagem" role="status"></p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

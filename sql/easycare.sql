@@ -5,11 +5,8 @@ USE PI;
 CREATE TABLE IF NOT EXISTS usuario(
 	id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
-    cpf VARCHAR(25) NOT NULL UNIQUE,
-    data_nascimento DATE NOT NULL,
     email VARCHAR(50) NOT NULL UNIQUE,
-    senha VARCHAR(250) NOT NULL,
-    telefone VARCHAR(20) NOT NULL
+    senha VARCHAR(250) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS documentos(
@@ -18,7 +15,7 @@ CREATE TABLE IF NOT EXISTS documentos(
     tipo VARCHAR(100) NOT NULL,
     titulo VARCHAR(100) NOT NULL,
     data_documentos TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    arquivo VARCHAR(100) NOT NULL,
+    arquivo VARCHAR(300) NOT NULL,
     observacao VARCHAR(200) NOT NULL,
 	FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
@@ -29,7 +26,7 @@ CREATE TABLE IF NOT EXISTS campanha_saude (
     descricao VARCHAR(255),
     data_inicio DATE,
     data_fim DATE
-);
+); /*MUDAR AQ DPS*/
 
 CREATE TABLE IF NOT EXISTS vinculo_familiar (
 	id_vinculo INT AUTO_INCREMENT PRIMARY KEY,
