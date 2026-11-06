@@ -8,7 +8,7 @@ const mensagem = document.getElementById('mensagem');
 
 async function carregarConsultas() {
     try {
-        const resposta = await fetch(`${API_URL}/consultas`);
+        const resposta = await fetch(`${API_URL}/consultas`);  
 
         if (!resposta.ok) {
             throw new Error('Erro ao buscar consultas');

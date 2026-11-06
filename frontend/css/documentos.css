@@ -190,21 +190,6 @@ textarea {
     margin-top: 14px;
 }
 
-button {
-    border: none;
-    border-radius: 5px;
-    background-color: #08b5f5;
-    color: white;
-    padding: 11px 15px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-button:hover {
-    background-color: #079ed6;
-}
-
 #cancelar,
 button.secundario {
     background-color: #eef2f8;

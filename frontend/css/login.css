@@ -12,7 +12,7 @@
 
     header {
         height: 65px;
-        background-color: white;
+        background-color: #191d3b;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -21,7 +21,7 @@
     }
 
     .logo {
-        width: 120px;
+        width: 100px;
         height: auto;
         display: block;
     }
