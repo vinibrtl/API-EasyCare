@@ -19,7 +19,7 @@ const idUsuario = 1;
 
 // USUARIO
 
-app.post('/usuario', async (req, res) => {
+app.post('/usuarios', async (req, res) => {
     try {
         const {nome, email, senha} = req.body
 
@@ -28,7 +28,7 @@ app.post('/usuario', async (req, res) => {
         }
 
         const [resultado] = await db.query(
-            'INSERT INTO usuario(nome, email, senha) VALUES (?, ?, ?)',
+            'INSERT INTO usuarios(nome, email, senha) VALUES (?, ?, ?)',
             [nome, email, senha]
         )
 
@@ -46,6 +46,60 @@ app.post('/usuario', async (req, res) => {
     });
 }
 })
+
+app.post('/api/login', async (req, res) => {
+    try {
+      const { email, senha } = req.body;
+  
+      if (!email || !senha) {
+        return res.status(400).json({ message: 'E-mail e senha são obrigatórios' });
+      }
+  
+      const [usuarios] = await db.query('SELECT * FROM usuarios WHERE email = ?', [email]);
+  
+      if (usuarios.length === 0) {
+        return res.status(401).json({ message: 'E-mail ou senha inválidos' });
+      }
+  
+      const usuario = usuarios[0];
+      //const senhaOk = await bcrypt.compare(senha, usuario.senha);
+      const senhaOk = usuario.senha
+      if (!senhaOk) {
+        return res.status(401).json({ message: 'E-mail ou senha inválidos' });
+      }
+  
+      //req.session.usuarioId = usuario.id_usuario;
+  
+      res.json({
+        id: usuario.id_usuario,
+        nome: usuario.nome,
+        email: usuario.email,
+        message: 'Login realizado com sucesso',
+      });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Erro ao fazer login' });
+    }
+  });
+  
+  // Dados do usuário logado
+  /*app.get('/api/usuario', exigirLogin, async (req, res) => {
+    try {
+      const [usuarios] = await db.query(
+        'SELECT id, nome, email, criado_em FROM usuarios WHERE id = ?',
+        [req.session.usuarioId]
+      );
+  
+      if (usuarios.length === 0) {
+        return res.status(404).json({ message: 'Usuário não encontrado' });
+      }
+  
+      res.json(usuarios[0]);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Erro ao buscar usuário' });
+    }
+  });  */
 
 
 app.get('/usuario', async (req, res) => {

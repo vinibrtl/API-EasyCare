@@ -56,7 +56,7 @@
         position: relative;
     }
 
-    .login-box {
+    .form-login {
         width: 320px;
         background-color: white;
         padding: 28px 22px 20px;
@@ -68,7 +68,7 @@
         height: fit-content;
     }
 
-    .login-box input {
+    .form-login input {
         width: 100%;
         height: 38px;
         border: 1px solid #d4d4d4;
@@ -79,11 +79,11 @@
         color: #333;
     }
 
-    .login-box input:focus {
+    .form-login input:focus {
         border-color: #13bce9;
     }
 
-    .login-box button {
+    .form-login button {
         width: 100%;
         height: 38px;
         border: none;
@@ -95,27 +95,26 @@
         cursor: pointer;
     }
 
-    .login-box button:hover {
+    .form-login button:hover {
         background-color: #0da8d1;
     }
 
-    .login-box p {
+    .form-login p {
         color: #888;
         text-align: center;
         font-size: 11px;
     }
 
-    .login-box a {
+    .form-login a {
         color: #13bce9;
         text-decoration: underline;
         margin-left: 2px;
     }
 
-    .signup-box {
-        padding-top: 5px;
-        padding-bottom: 0px;
+    .form-login {
+        padding-top: 35px;
+        padding-bottom: 25px;
     }
-
 
     footer {
         font-family: Arial, Helvetica, sans-serif;
