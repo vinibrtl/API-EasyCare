@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS documentos(
     data_documentos TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     arquivo VARCHAR(300) NOT NULL,
     observacao VARCHAR(200) NOT NULL,
-	FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+	FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
 );
 
 CREATE TABLE IF NOT EXISTS campanha_saude (
@@ -34,8 +34,8 @@ CREATE TABLE IF NOT EXISTS vinculo_familiar (
     id_familiar INT NOT NULL,
     parentesco VARCHAR(100) NOT NULL,
     permissoes VARCHAR(500) NOT NULL,
-    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario),
-    FOREIGN KEY (id_familiar) REFERENCES usuario(id_usuario)
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
+    FOREIGN KEY (id_familiar) REFERENCES usuarios(id_usuario)
 );
 
 CREATE TABLE IF NOT EXISTS lembretes (
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS lembretes (
     titulo VARCHAR(100) NOT NULL,
     data_hora DATE,
     tipo VARCHAR (100) NOT NULL,
-	FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+	FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
 ); 
 
 CREATE TABLE IF NOT EXISTS consulta (
@@ -54,10 +54,10 @@ CREATE TABLE IF NOT EXISTS consulta (
     especialidade VARCHAR(100) NOT NULL,
     local_consulta VARCHAR(100) NOT NULL,
     observacao VARCHAR(200) NOT NULL,
-    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
 );
 
-/*CREATE TABLE IF NOT EXISTS usuario(
+/*CREATE TABLE IF NOT EXISTS usuarios (
 	id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     cpf VARCHAR(25) NOT NULL UNIQUE,

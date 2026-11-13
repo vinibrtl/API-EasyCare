@@ -30,7 +30,7 @@ form.addEventListener('submit', async (evento) => {
     }
 
     mostrarMensagem(resultado.message, 'sucesso');
-    window.location.href = 'dashboard.html';
+    window.location.href = 'calendario.html';
   } catch (error) {
     mostrarMensagem(error.message, 'erro');
   }
